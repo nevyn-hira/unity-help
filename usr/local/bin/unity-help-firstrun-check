@@ -1,0 +1,12 @@
+#!/bin/bash
+
+FIRST_RUN_FILE="$HOME/.first_run_9871"
+
+if [ -f "$FIRST_RUN_FILE" ] ; then
+    if [ "$( dirname "$HOME" )" == "/tmp" ] ; then
+        unity_help guest
+    else
+        unity_help
+    fi
+    rm "$FIRST_RUN_FILE"
+fi

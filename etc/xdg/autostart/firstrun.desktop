@@ -1,0 +1,11 @@
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=Display help on first run
+Comment=Do any first run tasks
+Exec=unity-help-firstrun-check
+Terminal=false
+Type=Application
+StartupNotify=false
+#X-GNOME-Autostart-Delay=30
+NoDisplay=true

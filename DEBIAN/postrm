@@ -1,0 +1,3 @@
+#!/bin/bash
+
+update-gconf-defaults --source /usr/share/gconf/defaults --destination=/etc/gconf/gconf.xml.defaults/

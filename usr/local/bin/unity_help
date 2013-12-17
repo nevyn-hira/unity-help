@@ -1,0 +1,23 @@
+#!/bin/bash
+
+HELP="'file:///usr/local/share/unity-help/unity-help.svg'"
+GUEST_HELP="'file:///usr/local/share/unity-help/unity-help-guest.svg'"
+
+#get current wallpaper
+CURRENT="$(gsettings get org.gnome.desktop.background picture-uri)"
+
+if [ "$CURRENT" == "$HELP" ] || [ "$CURRENT" == "$GUEST_HELP" ] ; then
+  echo "$CURRENT $HELP"
+  #switch back to wallpaper
+  gsettings set org.gnome.desktop.background picture-uri "$( cat ~/.wallpaper )"
+  echo "Showing wallpaper"
+  echo $CURRENT
+else
+  echo "$CURRENT" > ~/.wallpaper
+  if [ "$1" == "guest" ] ; then
+    gsettings set org.gnome.desktop.background picture-uri "$GUEST_HELP"
+  else
+    gsettings set org.gnome.desktop.background picture-uri "$HELP"
+  fi
+  echo "Showing Help"
+fi

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+update-gconf-defaults --source=/usr/share/gconf/defaults --destination=/etc/gconf/gconf.xml.defaults
+[ ! -f '/etc/skel/.first_run_9871' ] && touch /etc/skel/.first_run_9871
+
+exit 0

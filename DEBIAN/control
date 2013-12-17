@@ -1,0 +1,8 @@
+Package: unity-help
+Version: 0.09~precise
+Priority: optional
+Section: unknown
+Essential: no
+Architecture: all
+Maintainer: Nevyn Hira <nevynh@gmail.com>
+Description: Switches between wallpaper and shortcut keys (for netbook screens)
